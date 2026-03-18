@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #f7f7f7;
+    color: #1a1a2e;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+}
+
+h1, h2, h3, p, ul {
+    margin-top: 0;
+}
+
+header {
+    background: #1a1a2e;
+    padding: 12px 20px;
+    margin: 0;
+}
+
+nav {
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #eaeaea;
+    font-weight: 400;
+    padding: 8px 12px;
+    margin: 0 5px;
+    border: 1px solid transparent;
+    border-radius: 12px;
+}
+
+nav a:hover {
+    border-color: #2a7188;
+}
+
+#navselected {
+    color: #8bbfcf;
+}
+
+#logo {
+    width: 30%;
+    display: block;
+    margin: 20px auto;
+}
+
+.main {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+body > h2,
+body > p,
+body > ul,
+body > table,
+body > form,
+body > h3 {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+header + * {
+    margin-top: 10px;
+}
+
+.cta {
+    display: inline-block;
+    background-color: #2a7188;
+    color: #ffffff;
+    padding: 12px 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+th {
+    padding: 12px;
+    background-color: #2a7188;
+    color: #ffffff;
+}
+
+td {
+    padding: 10px;
+}
+
+tr:nth-child(even) {
+    background-color: #e3f2f6;
+}
+
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+form input {
+    display: block;
+    margin: 10px auto;
+    padding: 8px;
+}
+
+#museum-image {
+    display: block;
+    margin: 20px auto;
+}
+
+footer {
+    background: #1a1a2e;
+    color: #eaeaea;
+    padding: 50px;
+    text-align: center;
+    margin-top: 40px;
+    border-top: 2px solid #2a7188;
+}
+
+html, body {
+    height: 100%;
+}
