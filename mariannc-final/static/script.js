@@ -212,7 +212,6 @@ function initMap() {
     }
 }
 
-/* Gallery */
 var galleryImages = [
     {
         src: "./static/museum.jpg",
