@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Marianne Chang">
+
+    <link rel="stylesheet" href="../static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="../static/script.js" defer></script>
+
+    <title>Explore Exhibitions | MonoMuse</title>
+</head>
+
+<body onload="addYear()">
+<div class="container">
+
+    <header class="header">
+        <nav class="nav_bar">
+            <div class="nav_left">
+                <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Logo">
+            </div>
+
+            <div class="nav_right" id="navLinks">
+                <a href="../index.html">Home</a>
+                <a href="explore.html">Explore</a>
+                <a href="exhibitions.html">Exhibitions</a>
+                <a href="tickets.html">Tickets</a>
+                <a href="checkout.html">Checkout</a>
+                <a href="donations.html">Donations</a>
+            </div>
+
+            <button class="hamburger" type="button" onclick="toggleMenu()" aria-label="Toggle navigation menu">☰</button>
+        </nav>
+    </header>
+
+    <main class="main">
+        <h1>Current Exhibitions</h1>
+
+        <section class="content-card">
+            <h2>Digital Dreams</h2>
+
+            <img src="../static/dreams.jpg" alt="Digital Dreams exhibition with immersive AI-generated visuals" class="exhibit-image">
+
+            <p>
+                An immersive exhibition exploring the intersection of art and artificial intelligence.
+                Visitors experience generative visuals, machine learning installations, and interactive media.
+            </p>
+        </section>
+
+        <section class="content-card">
+            <h2>Fragments</h2>
+
+            <img src="../static/fragment.jpg" alt="Fragments exhibition featuring abstract light and sculpture installations" class="exhibit-image">
+
+            <p>
+                A collection of modern installations that challenge perception, space, and perspective.
+                This exhibit blends sculpture, light, and sound into a multi-sensory experience.
+            </p>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p id="copyYear"></p>
+    </footer>
+
+</div>
+</body>
+</html>

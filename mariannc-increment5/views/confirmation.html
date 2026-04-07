@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Marianne Chang">
+
+    <link rel="stylesheet" href="../static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="../static/script.js" defer></script>
+
+    <title>MonoMuse | Order Confirmation</title>
+</head>
+
+<body onload="addYear()">
+<div class="container">
+
+    <header class="header">
+        <nav class="nav_bar">
+            <div class="nav_left">
+                <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Logo">
+            </div>
+
+            <div class="nav_right" id="navLinks">
+                <a href="../index.html">Home</a>
+                <a href="explore.html">Explore</a>
+                <a href="exhibitions.html">Exhibitions</a>
+                <a href="tickets.html">Tickets</a>
+                <a href="checkout.html">Checkout</a>
+                <a href="donations.html">Donations</a>
+            </div>
+
+            <button class="hamburger" type="button" onclick="toggleMenu()" aria-label="Toggle navigation menu">☰</button>
+        </nav>
+    </header>
+
+    <main class="main">
+        <h1>Order Confirmation</h1>
+
+        <section class="content-card confirmation-card">
+            <h2>Thank you for your order!</h2>
+            <p id="confirmationMessage">Your simulated order has been received.</p>
+            <p><strong>Visit Date:</strong> <span id="confirmDate">Not provided</span></p>
+            <p><strong>Membership Status:</strong> <span id="confirmMembership">Not provided</span></p>
+            <p><strong>Ticket Type:</strong> <span id="confirmType">Not provided</span></p>
+            <p><strong>Quantity:</strong> <span id="confirmQuantity">Not provided</span></p>
+            <p><strong>Email:</strong> <span id="confirmEmail">Not provided</span></p>
+            <p><strong>Total Cost:</strong> <span id="confirmTotal">$0</span></p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p id="copyYear"></p>
+    </footer>
+
+</div>
+</body>
+</html>

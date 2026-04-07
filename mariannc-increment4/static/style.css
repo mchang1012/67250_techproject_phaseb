@@ -1,0 +1,212 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #f7f7f7;
+    color: #1a1a2e;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+}
+
+h1, h2, h3, p, ul {
+    margin-top: 0;
+}
+
+.container {
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+}
+
+.header {
+    grid-area: header;
+}
+
+.nav_bar {
+    background: #1a1a2e;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nav_left {
+    display: flex;
+    align-items: center;
+}
+
+.nav_right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.main {
+    grid-area: main;
+    max-width: 800px;
+    width: 90%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.footer {
+    grid-area: footer;
+    background: #1a1a2e;
+    color: #eaeaea;
+    padding: 50px;
+    text-align: center;
+    margin-top: 40px;
+    border-top: 2px solid #2a7188;
+}
+
+nav a {
+    text-decoration: none;
+    color: #eaeaea;
+    font-weight: 400;
+    padding: 8px 12px;
+    border: 1px solid transparent;
+    border-radius: 12px;
+}
+
+nav a:hover {
+    border-color: #2a7188;
+}
+
+.active {
+    color: #8bbfcf;
+}
+
+#logo {
+    width: 120px;
+    display: block;
+    margin: 0;
+}
+
+.cta,
+button {
+    display: inline-block;
+    background-color: #2a7188;
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    margin: 10px 5px;
+    border: none;
+    cursor: pointer;
+    min-width: 140px;
+    text-align: center;
+}
+
+button:hover,
+.cta:hover {
+    opacity: 0.9;
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 800px;
+}
+
+th {
+    padding: 12px;
+    background-color: #2a7188;
+    color: #ffffff;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid #d9d9d9;
+}
+
+tr:nth-child(even) {
+    background-color: #e3f2f6;
+}
+
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+form input {
+    display: block;
+    margin: 10px auto;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#ticketForm {
+    display: none;
+}
+
+#longIntro,
+#readLess {
+    display: none;
+}
+
+#museum-image {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+@media (max-width: 600px) {
+    .nav_bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav_right {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    nav a {
+        display: block;
+        margin: 4px 0;
+    }
+
+    #logo {
+        width: 60%;
+        max-width: 180px;
+        margin-bottom: 10px;
+    }
+
+    .main {
+        width: 92%;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+
+    .footer {
+        padding: 25px 15px;
+    }
+}

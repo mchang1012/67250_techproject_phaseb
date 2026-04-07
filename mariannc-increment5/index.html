@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Marianne Chang">
+
+    <link rel="stylesheet" href="./static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-4.0.0-beta.min.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <script src="./static/script.js" defer></script>
+
+    <title>MonoMuse | Home</title>
+</head>
+
+<body onload="addYear()">
+<div class="container">
+    <header class="header">
+        <nav class="nav_bar">
+            <div class="nav_left">
+                <img id="logo" src="./static/monomuselogo.png" alt="MonoMuse Logo">
+            </div>
+
+            <div class="nav_right" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="views/explore.html">Explore</a>
+                <a href="views/exhibitions.html">Exhibitions</a>
+                <a href="views/tickets.html">Tickets</a>
+                <a href="views/checkout.html">Checkout</a>
+                <a href="views/donations.html">Donations</a>
+            </div>
+
+            <button class="hamburger" type="button" onclick="toggleMenu()" aria-label="Toggle navigation menu">☰</button>
+        </nav>
+    </header>
+
+    <main class="main">
+        <h1>MonoMuse</h1>
+        <h2 id="greeting">Welcome to MonoMuse</h2>
+
+        <p id="shortIntro">
+            MonoMuse is a contemporary museum where art, technology, and storytelling come together in immersive and interactive ways.
+        </p>
+
+        <p id="longIntro">
+            Through rotating exhibitions, digital installations, and hands-on creative experiences, MonoMuse invites visitors to explore how innovation is reshaping the way we create and connect with art. Whether you are visiting for the first time or returning to discover something new, MonoMuse offers a space designed to inspire curiosity, reflection, and creativity.
+        </p>
+
+        <p class="read-toggle">
+            <span id="readMore" class="text-link" tabindex="0" role="button">Read More</span>
+            <span id="readLess" class="text-link" tabindex="0" role="button">Read Less</span>
+        </p>
+
+        <a class="cta" href="views/tickets.html">Buy Tickets</a>
+
+        <section class="content-card">
+            <h3>Museum Gallery</h3>
+
+            <div class="gallery-wrapper">
+                <div class="gallery-display">
+                    <img
+                        id="galleryImage"
+                        src="./static/museum.jpg"
+                        alt="Exterior view of MonoMuse museum building"
+                        class="gallery-image"
+                    >
+                    <p id="galleryCaption" class="gallery-caption">Exterior view of MonoMuse museum building</p>
+                </div>
+
+                <div class="gallery-controls">
+                    <button class="gallery-btn" type="button" onclick="changeSlide(-1)" aria-label="Show previous gallery image">&#10094; Previous</button>
+                    <button class="gallery-btn" type="button" onclick="changeSlide(1)" aria-label="Show next gallery image">Next &#10095;</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h3>Plan Your Visit</h3>
+            <p><strong>Hours:</strong> Tuesday–Sunday, 10:00 AM – 5:00 PM</p>
+            <p><strong>Location:</strong> Pittsburgh Cultural District</p>
+            <p><strong>Contact:</strong> info@monomuse.org</p>
+        </section>
+
+        <section class="content-card">
+            <h3>Featured Museum Video</h3>
+            <div class="video-container">
+                <iframe
+                    src="https://www.youtube.com/embed/DN9z4zpgCts"
+                    title="Featured museum video"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h3>Visit Us</h3>
+            <div id="map"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p id="copyYear"></p>
+    </footer>
+
+</div>
+</body>
+</html>

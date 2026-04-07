@@ -1,0 +1,387 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #f7f7f7;
+    color: #1a1a2e;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+}
+
+h1, h2, h3, p, ul {
+    margin-top: 0;
+}
+
+.container {
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+}
+
+.header {
+    grid-area: header;
+}
+
+.nav_bar {
+    background: #1a1a2e;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nav_left {
+    display: flex;
+    align-items: center;
+}
+
+.nav_right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.main {
+    grid-area: main;
+    max-width: 850px;
+    width: 90%;
+    margin: 24px auto;
+    text-align: center;
+}
+
+.footer {
+    grid-area: footer;
+    background: #1a1a2e;
+    color: #eaeaea;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 40px;
+    border-top: 2px solid #2a7188;
+}
+
+nav a {
+    text-decoration: none;
+    color: #eaeaea;
+    font-weight: 400;
+    padding: 8px 12px;
+    border: 1px solid transparent;
+    border-radius: 12px;
+}
+
+nav a:hover {
+    border-color: #2a7188;
+}
+
+.active {
+    color: #8bbfcf;
+}
+
+#logo {
+    width: 120px;
+    display: block;
+    margin: 0;
+}
+
+.cta,
+.main button,
+.checkout-form button,
+.hamburger,
+.gallery-btn {
+    display: inline-block;
+    background-color: #2a7188;
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    margin: 10px 5px;
+    border: none;
+    cursor: pointer;
+    min-width: 140px;
+    text-align: center;
+}
+
+button:hover,
+.cta:hover,
+.gallery-btn:hover {
+    opacity: 0.9;
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 850px;
+    background: #ffffff;
+}
+
+th {
+    padding: 12px;
+    background-color: #2a7188;
+    color: #ffffff;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid #d9d9d9;
+}
+
+tr:nth-child(even) {
+    background-color: #e3f2f6;
+}
+
+.content-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    margin: 20px 0;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.exhibit-image {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 16px;
+    margin: 15px 0;
+    display: block;
+}
+
+.checkout-form {
+    max-width: 560px;
+    margin: 20px auto;
+    text-align: left;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.field-group {
+    margin-bottom: 18px;
+}
+
+.field-group label,
+.checkbox-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.checkout-form input,
+.checkout-form select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #cfd8dc;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 18px 0;
+}
+
+.checkbox-group input {
+    width: auto;
+    margin: 0;
+}
+
+.required {
+    color: #b22222;
+}
+
+.error-text {
+    min-height: 18px;
+    color: #b22222;
+    font-size: 14px;
+    margin: 6px 0 0;
+}
+
+.total-box {
+    background: #e3f2f6;
+    border-radius: 12px;
+    padding: 16px;
+    margin: 18px 0;
+}
+
+.confirmation-card {
+    max-width: 560px;
+    margin: 24px auto;
+}
+
+#longIntro,
+#readLess {
+    display: none;
+}
+
+.read-toggle {
+    margin: 12px 0 18px;
+}
+
+.text-link {
+    color: #2a7188;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 600;
+    margin: 0 8px;
+    display: inline-block;
+}
+
+.text-link:hover,
+.text-link:focus {
+    color: #1a1a2e;
+}
+
+#museum-image {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+}
+
+ul {
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+.video-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.video-container iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+    border-radius: 16px;
+}
+
+#map {
+    height: 320px;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.gallery-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.gallery-display {
+    width: 100%;
+    max-width: 700px;
+}
+
+.gallery-image {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 16px;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.gallery-caption {
+    margin-top: 12px;
+    font-size: 15px;
+}
+
+.gallery-controls {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery-btn {
+    min-width: 120px;
+    padding: 12px 16px;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+.hamburger {
+    display: none;
+    min-width: auto;
+    padding: 10px 14px;
+    font-size: 22px;
+    line-height: 1;
+}
+
+@media (max-width: 650px) {
+    .nav_bar {
+        align-items: center;
+    }
+
+    .nav_right {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav_right.responsive {
+        display: flex;
+    }
+
+    .hamburger {
+        display: inline-block;
+    }
+
+    #logo {
+        width: 100px;
+        max-width: 100px;
+        margin-bottom: 0;
+    }
+
+    .main {
+        width: 92%;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+
+    .footer {
+        padding: 25px 15px;
+    }
+
+    .checkout-form {
+        padding: 18px;
+    }
+
+    .gallery-btn {
+        min-width: 110px;
+        font-size: 15px;
+    }
+}

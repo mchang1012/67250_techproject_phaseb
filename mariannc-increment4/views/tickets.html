@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Marianne Chang">
+
+    <link rel="stylesheet" href="../static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="../static/script.js" defer></script>
+
+    <title>Tickets</title>
+</head>
+
+<body onload="addYear()">
+<div class="container">
+
+    <header class="header">
+        <nav class="nav_bar">
+            <div class="nav_left">
+                <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Logo">
+            </div>
+
+            <div class="nav_right">
+                <a href="../index.html">Home</a>
+                <a href="explore.html">Explore</a>
+                <a href="exhibitions.html">Exhibitions</a>
+                <a href="tickets.html">Tickets</a>
+                <a href="checkout.html">Checkout</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <h2>Tickets</h2>
+
+        <table>
+            <tr>
+                <th>Ticket Type</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>General</td>
+                <td>Access to all exhibitions</td>
+                <td>$20</td>
+            </tr>
+            <tr>
+                <td>Student</td>
+                <td>Discounted ticket with valid ID</td>
+                <td>$12</td>
+            </tr>
+            <tr>
+                <td>Member</td>
+                <td>Free entry for members</td>
+                <td>$0</td>
+            </tr>
+        </table>
+
+        <h3>Available April Dates</h3>
+
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>April 12</td>
+                <td>10:00 AM</td>
+                <td>
+                    <button type="button" onclick="showForm('April 12, 10:00 AM')">
+                        Buy Now
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>April 18</td>
+                <td>1:00 PM</td>
+                <td>
+                    <button type="button" onclick="showForm('April 18, 1:00 PM')">
+                        Buy Now
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>April 25</td>
+                <td>3:00 PM</td>
+                <td>
+                    <button type="button" onclick="showForm('April 25, 3:00 PM')">
+                        Buy Now
+                    </button>
+                </td>
+            </tr>
+        </table>
+
+        <form id="ticketForm">
+            <h3>Purchase Tickets</h3>
+
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="number" placeholder="Number of Tickets" min="1" required>
+            <input type="text" id="selectedDate" placeholder="Selected Date" readonly>
+
+            <button type="button" onclick="submitTicket()">Submit</button>
+        </form>
+
+    </main>
+
+    <footer class="footer">
+        <p id="copyYear"></p>
+    </footer>
+
+</div>
+</body>
+</html>

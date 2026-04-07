@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Marianne Chang">
+
+    <link rel="stylesheet" href="../static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="../static/script.js" defer></script>
+
+    <title>MonoMuse | Checkout</title>
+</head>
+
+<body onload="addYear()">
+<div class="container">
+
+    <header class="header">
+        <nav class="nav_bar">
+            <div class="nav_left">
+                <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Logo">
+            </div>
+
+            <div class="nav_right" id="navLinks">
+                <a href="../index.html">Home</a>
+                <a href="explore.html">Explore</a>
+                <a href="exhibitions.html">Exhibitions</a>
+                <a href="tickets.html">Tickets</a>
+                <a href="checkout.html">Checkout</a>
+                <a href="donations.html">Donations</a>
+            </div>
+
+            <button class="hamburger" type="button" onclick="toggleMenu()" aria-label="Toggle navigation menu">☰</button>
+        </nav>
+    </header>
+
+    <main class="main">
+        <h1>Ticket Checkout</h1>
+
+        <form id="checkoutForm" class="checkout-form" novalidate>
+            <div class="field-group">
+                <label for="visitDate">Visit Date <span class="required">*</span></label>
+                <input type="date" id="visitDate" name="visitDate" required>
+                <p class="error-text" id="visitDateError"></p>
+            </div>
+
+            <div class="field-group">
+                <label for="membershipStatus">Membership Status <span class="required">*</span></label>
+                <select id="membershipStatus" name="membershipStatus" required>
+                    <option value="">Select your status</option>
+                    <option value="Guest">Guest</option>
+                    <option value="Student">Student</option>
+                    <option value="Member">Member</option>
+                </select>
+                <p class="error-text" id="membershipStatusError"></p>
+            </div>
+
+            <div class="field-group">
+                <label for="ticketType">Ticket Type <span class="required">*</span></label>
+                <select id="ticketType" name="ticketType" required>
+                    <option value="">Select a ticket type</option>
+                    <option value="General">General Admission</option>
+                    <option value="Student">Student Admission</option>
+                    <option value="Member">Member Reservation</option>
+                </select>
+                <p class="error-text" id="ticketTypeError"></p>
+            </div>
+
+            <div class="field-group">
+                <label for="ticketQuantity">Ticket Quantity (1–10) <span class="required">*</span></label>
+                <input type="number" id="ticketQuantity" name="ticketQuantity" min="1" max="10" required>
+                <p class="error-text" id="ticketQuantityError"></p>
+            </div>
+
+            <div class="field-group">
+                <label for="email">Email <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required>
+                <p class="error-text" id="emailError"></p>
+            </div>
+
+            <div class="field-group">
+                <label for="zipCode">Zip Code (optional)</label>
+                <input type="text" id="zipCode" name="zipCode" maxlength="5">
+                <p class="error-text" id="zipCodeError"></p>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="mailingList" name="mailingList">
+                <label for="mailingList">Join our mailing list</label>
+            </div>
+
+            <div class="total-box">
+                <p><strong>Price per ticket:</strong> <span id="pricePerTicket">$0</span></p>
+                <p><strong>Total:</strong> <span id="orderTotal">$0</span></p>
+            </div>
+
+            <button type="button" onclick="placeOrder()">Place Order</button>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <p id="copyYear"></p>
+    </footer>
+
+</div>
+</body>
+</html>

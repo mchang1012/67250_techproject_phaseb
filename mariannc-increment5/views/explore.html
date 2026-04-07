@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Marianne Chang">
+    <meta name="keywords" content="MonoMuse, explore, museum info">
+    <meta name="description" content="Learn more about MonoMuse and its mission.">
+
+    <link rel="stylesheet" href="../static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="../static/script.js" defer></script>
+
+    <title>MonoMuse | Explore</title>
+</head>
+
+<body onload="addYear()">
+<div class="container">
+
+    <header class="header">
+        <nav class="nav_bar">
+            <div class="nav_left">
+                <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Logo">
+            </div>
+
+            <div class="nav_right" id="navLinks">
+                <a href="../index.html">Home</a>
+                <a href="explore.html">Explore</a>
+                <a href="exhibitions.html">Exhibitions</a>
+                <a href="tickets.html">Tickets</a>
+                <a href="checkout.html">Checkout</a>
+                <a href="donations.html">Donations</a>
+            </div>
+
+            <button class="hamburger" type="button" onclick="toggleMenu()" aria-label="Toggle navigation menu">☰</button>
+        </nav>
+    </header>
+
+    <main class="main">
+        <h1>Explore MonoMuse</h1>
+
+        <img id="museum-image" src="../static/museum.jpg" alt="Exterior of the MonoMuse museum building">
+
+        <div class="content-card">
+            <p>
+                MonoMuse is a contemporary museum dedicated to showcasing innovative art and immersive experiences.
+                We connect visitors with creative expression through technology, storytelling, and interactive design.
+            </p>
+
+            <ul>
+                <li>Founded in 2024</li>
+                <li>Welcomes artists and visitors from around the world</li>
+                <li>Focuses on digital and interactive art</li>
+                <li>Hosts rotating exhibitions and cultural events</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p id="copyYear"></p>
+    </footer>
+
+</div>
+</body>
+</html>
